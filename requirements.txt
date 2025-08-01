@@ -1,0 +1,6 @@
+seaborn
+pandas
+numpy
+matplotlib
+-e .
+ ##This will automatically install the package in editable mode

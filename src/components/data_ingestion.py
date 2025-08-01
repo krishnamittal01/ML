@@ -14,13 +14,13 @@ class DataIngesttionConfig:
     raw_data_path: str = os.path.join('artifacts', "data.csv")
 
 class DataIngestion:
-    def __init__(self):  # ✅ Fixed constructor
+    def __init__(self):  
         self.ingestion_config = DataIngesttionConfig()
 
     def initiate_data_ingestion(self):
         logging.info('Entered the data ingestion method or component')
         try:
-            df = pd.read_csv("notebook/data/StudentsPerformance.csv")  # ✅ Use forward slash or raw string
+            df = pd.read_csv("notebook/data/StudentsPerformance.csv")  
             logging.info('Read the dataset as dataframe')
 
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path), exist_ok=True)
